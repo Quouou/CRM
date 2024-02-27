@@ -12,6 +12,7 @@ body {
 }
 
 .card{
+    width: 18rem;
     margin-bottom: 30px;
     --bs-secondary-bg: #B4B4B8
 
