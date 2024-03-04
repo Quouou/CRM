@@ -2,23 +2,27 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   -ms-overflow-style: none;
 }
 
 *::-webkit-scrollbar {
-  display: none;
+  display: auto;
 }
-
+a{
+  color:#158d8e;
+  text-decoration: none;
+  margin-top: 10px;
+  
+}
 .board {
   width: 100%;
   height: 100vh;
-  overflow: scroll;
-  padding-left: 30px;
-  padding-top: 60px; 
-  background-color: #598392ce;
-
+  overflow-y: auto;
+  background: linear-gradient(to left, #081e17, #43c6acd7);
+  color: #edf2f2;
 }
 
 #todo-form {
@@ -39,31 +43,16 @@
   font-size: 14px;
   outline: none;
 }
-
-/* #todo-form button {
-  padding: 12px 32px;
-
-  border-radius: 4px;
-  border: none;
-
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
-  background: #ffffff;
-  color: black;
-
-  font-weight: bold;
-  font-size: 14px;
-  cursor: pointer;
-} */
-
+.navsideBar{
+  /* background-color:  #158d8e  ; */
+  background-color:#020b0bda;
+}
 .lanes {
   display: flex;
   align-items: flex-start;
   justify-content: start;
   gap: 16px;
-  
   padding: 24px 32px;
-
-  overflow: scroll;
   height: 100%;
 }
 
@@ -71,18 +60,28 @@
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 8px;
-  color:aliceblue;
 }
+.coloumnAdd{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color:#edf2f2;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background-color: #43c6acd8;
+  padding: 12px;
+  border-radius: 4px;
+  width: 225px;
+  min-height: 120px;
 
+  flex-shrink: 0;
+}
 .swim-lane {
   display: flex;
   flex-direction: column;
   gap: 12px;
-
-
-  background: #373F47;
+  color: white;
+  background: #43c6acd8; 
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
-
   padding: 12px;
   border-radius: 4px;
   width: 225px;
@@ -101,14 +100,31 @@
   font-size: 16px;
   cursor: move;
 }
-
 .is-dragging {
   scale: 1.05;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
-  background: rgb(50, 50, 50);
-  color: white;
+  background-color: #158d8e;
+  color: black;
 }
-
 .card-body{
-  background-color: #FCAA67;
+  background-color: #f5f5f5;
+}
+.newTask{
+  text-align: center;
+  color:aliceblue
+}
+.btn-primary{
+  background-color: #402dda;
+}
+.bi {
+  font-size: 25px;
+  text-align: center;
+  /* color:#158d8e; */
+  color: #264cde;
+}
+.offcanvas{
+  background-color: #158d8e;
+}
+.form-label{
+  color:aliceblue;
 }

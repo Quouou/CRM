@@ -25,3 +25,22 @@ form.addEventListener("submit", (e) => {
 
   input.value = "";
 });
+
+const buttons = document.querySelectorAll('.popupButton');
+const popup = document.getElementById('popup');
+const closeButton = document.getElementById('closeButton');
+
+function showPopup() {
+  popup.style.display = 'block';
+}
+
+function hidePopup() {
+  popup.style.display = 'none';
+}
+
+buttons.forEach(button => {
+  button.addEventListener('click', showPopup);
+});
+
+// Event listener for close button click to hide the popup
+closeButton.addEventListener('click', hidePopup);
